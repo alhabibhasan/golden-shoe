@@ -1,0 +1,9 @@
+.back-button, .next-button {
+    background-color: #efefef;
+    border: 0;
+}
+
+.back-button:active, .next-button:active {
+    background-color: #efefef;
+    border: 0;
+}
