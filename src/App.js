@@ -1,25 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
+import ListShoes from './components/products/ListShoes';
+import ShoeDetail from './components/products/ShoeDetail';
+import Index from './components/Index';
+import { BrowserRouter as Router, Route, Link} from "react-router-dom";
 import './App.css';
+import Returns from './components/account/Returns';
+import styled from 'styled-components';
+
+const Header = styled.h1`
+  margin-top: 4vh;
+  font-weight: 150;
+`
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+
+        <div className="App">
+          <Header className="App-header">
+            <Link style={{textDecoration:'none', color:'black'}} to='/'>Golden Shoe</Link>
+          </Header>
+        </div>
+
+        <Route path="/" exact component={Index} />
+        <Route path="/shoes/" exact component={ListShoes} />
+        <Route path="/shoe/:id(\d+)" exact component={ShoeDetail} /> 
+        <Route path="/returns" exact component={Returns} /> 
+    </Router>
   );
 }
 
