@@ -1,9 +1,11 @@
 import shoes from '../data/shoes';
 import orders from '../data/orders';
+import orderTracking from '../data/order-tracking';
 
 const dataMap = {
     'shoes' : shoes,
-    'orders': orders
+    'orders': orders,
+    'tracking': orderTracking,
 }
 
 const getData = (dataType) => {
