@@ -28,6 +28,10 @@ const Index = (props) => {
                 <LinkItem>
                     <Link to='/returns'>Returns</Link>
                 </LinkItem>
+
+                <LinkItem>
+                    <Link to='/track/2'>Track order</Link>
+                </LinkItem>
                 
           </div>
         </Welcome>
